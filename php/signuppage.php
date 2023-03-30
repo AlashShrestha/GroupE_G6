@@ -15,7 +15,9 @@
         box-sizing: border-box;
     }
 
-   
+    body{
+        background-color: #3E54AC;
+    }
       
     .container {
         height: 100vh;
