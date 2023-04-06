@@ -1,18 +1,22 @@
+// Defining lattitude, longitude, zoom level and zoomControl setting for map
 map = L.map("map", {
   center: [27.71228, 85.33076],
   zoom: 15,
   zoomControl: false,
 });
+// Changing the position of zoomControl to bottom right
 L.control
   .zoom({
-    position: "bottomright", 
+    position: "bottomright",
   })
   .addTo(map);
-// google = L.tileLayer("http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}", { 
+// Adding Google Maps Layer in the map
+google = L.tileLayer("http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}", {
   maxZoom: 20,
-  //subdomains: ["mt0", "mt1", "mt2", "mt3"],
-// });
+  subdomains: ["mt0", "mt1", "mt2", "mt3"],
+});
 google.addTo(map);
+// Changing the position of locate to bottom right
 L.control
   .locate({
     position: "bottomright",
