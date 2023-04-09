@@ -1,5 +1,5 @@
 // Defining lattitude, longitude, zoom level and zoomControl setting for map
-map = L.map("map", {
+var map = L.map("map", {
   center: [27.71228, 85.33076],
   zoom: 15,
   zoomControl: false,
@@ -22,3 +22,8 @@ L.control
     position: "bottomright",
   })
   .addTo(map);
+// Adding Search feature
+L.Control.geocoder({
+  collapsed: false,
+  position: "topleft",
+}).addTo(map);
