@@ -12,20 +12,17 @@ require '/xampp/htdocs/GroupE_G6/PHPMailer/src/SMTP.php';
 
 function send_password_reset($get_name, $get_email, $token)
 {
-    $mail = new PHPMailer(true);
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+    $mail = new PHPMailer();
     $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'localhost';                     //Set the SMTP server to send through
-    // $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    // $mail->Username   = 'sohannagarkoti18@gmail.com';           //SMTP username
-    // $mail->Password   = '***';                               //SMTP password
-    // $mail->SMTPSecure = "tls";            //Enable implicit TLS encryption
-    $mail->SMTPAuth   = false;                                   //Enable SMTP authentication
-    $mail->SMTPSecure = false;            //Enable implicit TLS encryption
-    $mail->Port       = 25;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+    $mail->Host       = "smtp.gmail.com";                     //Set the SMTP server to send through
+    $mail->Username   = "vcity163@gmail.com";           //Gmail username
+    $mail->Password   = "Aspirine";                               //Gmail password
+    $mail->SMTPSecure = "tls";            //Enable implicit TLS encryption
+    $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom('sohannagarkoti18@gmail.com', $get_name);
+    $mail->setFrom("vcity163@gmail.com", $get_name);
     $mail->addAddress($get_email);     //Add a recipient
 
     $mail->isHTML(true);
@@ -46,7 +43,7 @@ if (isset($_POST['password_reset_link'])) {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $token = md5(rand());
 
-    $check_email = "SELECT email FROM user_detail WHERE email = '$email' LIMIT 1";
+    $check_email = "SELECT email, name FROM user_detail WHERE email = '$email' LIMIT 1";
     $check_email_run = mysqli_query($conn, $check_email);
 
     if (mysqli_num_rows($check_email_run) > 0) {
@@ -59,7 +56,7 @@ if (isset($_POST['password_reset_link'])) {
 
         if ($update_token_run) {
             send_password_reset($get_name, $get_email, $token);
-            $_SESSION['status'] = "We e-mailed you a passowrd reset link";
+            $_SESSION['status'] = "We e-mailed you a password reset link";
             header("Location: password-reset.php");
             exit(0);
         } else {
