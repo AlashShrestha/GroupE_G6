@@ -84,7 +84,7 @@
 
 
                             <div class="container-fluid d-flex justify-content-center mb-3">
-                                <a href="">Forgot Password?</a>
+                                <a href="password-reset.php">Forgot Password?</a>
                             </div>
                             <div class="container-fluid d-flex justify-content-center mb-3">
                                 Don't have an account? <a href="signuppage.php" class="text-primary fw-bold">Sign Up</a>

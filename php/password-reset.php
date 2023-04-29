@@ -36,7 +36,7 @@ session_start();
                             <h5>Reset Password</h5>
                         </div>
                         <div class="card-body p-4">
-                            <form action="password-reset-code.php" method="POST">
+                            <form action="password_reset_code.php" method="POST">
                                 <div class="form-group mb-3">
                                     <label for="Email Address"></label>
                                     <input type="email" name="email" class="form-control" placeholder="Enter Email Address">
