@@ -22,7 +22,7 @@ function send_password_reset($get_name, $get_email, $token)
     // $mail->SMTPSecure = "tls";            //Enable implicit TLS encryption
     $mail->SMTPAuth   = false;                                   //Enable SMTP authentication
     $mail->SMTPSecure = false;            //Enable implicit TLS encryption
-    $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    $mail->Port       = 25;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
     $mail->setFrom('sohannagarkoti18@gmail.com', $get_name);
@@ -35,7 +35,7 @@ function send_password_reset($get_name, $get_email, $token)
         <h2> Hello </h2>
         <h3> You are receiving this email because we revieved a password reser request for your account </h3>
         <br></br>
-        <a href = 'http://localhost/GroupE_G6/php/password-change.php?token=$token&email=$email'>Click Me</a>
+        <a href = 'http://localhost/GroupE_G6/php/password-change.php?token=$token&email=$get_email'>Click Me</a>
     ";
 
     $mail->Body = $email_templet;
@@ -43,7 +43,7 @@ function send_password_reset($get_name, $get_email, $token)
 }
 
 if (isset($_POST['password_reset_link'])) {
-    $email = mysqli_real_escape_string($conn, $POST['email']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
     $token = md5(rand());
 
     $check_email = "SELECT email FROM user_detail WHERE email = '$email' LIMIT 1";
@@ -67,7 +67,6 @@ if (isset($_POST['password_reset_link'])) {
             header("Location: password-reset.php");
             exit(0);
         }
-        echo ("Found");
     } else {
         $_SESSION['status'] = "No Email Found";
         header("Location: password-reset.php");
