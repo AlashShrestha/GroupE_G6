@@ -12,12 +12,13 @@ require '/xampp/htdocs/GroupE_G6/PHPMailer/src/SMTP.php';
 
 function send_password_reset($get_name, $get_email, $token)
 {
+    include('smtp.php');
     $mail = new PHPMailer();
     $mail->isSMTP();                                            //Send using SMTP
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
     $mail->Host       = "smtp.gmail.com";                     //Set the SMTP server to send through
-    $mail->Username   = "vcity163@gmail.com";           //Gmail username
-    $mail->Password   = "Aspirine";                               //Gmail password
+    $mail->Username   = $user_mail;           //Gmail username
+    $mail->Password   = $pass;                               //Gmail password
     $mail->SMTPSecure = "tls";            //Enable implicit TLS encryption
     $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
@@ -30,7 +31,7 @@ function send_password_reset($get_name, $get_email, $token)
 
     $email_templet = "
         <h2> Hello </h2>
-        <h3> You are receiving this email because we revieved a password reser request for your account </h3>
+        <h3> You are receiving this email because we revieved a password reset request for your account </h3>
         <br></br>
         <a href = 'http://localhost/GroupE_G6/php/password-change.php?token=$token&email=$get_email'>Click Me</a>
     ";
