@@ -31,7 +31,7 @@ function send_password_reset($get_name, $get_email, $token)
 
     $email_templet = "
         <h2> Hello </h2>
-        <h3> You are receiving this email because we revieved a password reset request for your account </h3>
+        <p> You are receiving this email because we revieved a password reset request for your account </p>
         <br></br>
         <a href = 'http://localhost/GroupE_G6/php/password-change.php?token=$token&email=$get_email'>Click Me</a>
     ";
