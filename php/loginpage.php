@@ -3,11 +3,11 @@
 include("db_conn.php");
 
 if (isset($_POST['submit'])) {
-    $email = $_POST['username'];
+    $login = $_POST['username'];
     $password = $_POST['pass'];
 }
 
-$check = "SELECT * from user WHERE username='$email' AND pass='$password'";
+$check = "SELECT * from user WHERE username='$login' AND pass='$password'";
 
 $result = $conn->query($check);
 

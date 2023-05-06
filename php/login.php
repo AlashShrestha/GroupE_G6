@@ -101,7 +101,7 @@
                             <div class="form-floating mb-1">
 
 
-                                <input type="text" class="form-control input-field" id="floatingInput" placeholder="name" name="username" required>
+                                <input type="text" class="form-control input-field" id="floatingInput" name="username" required>
 
                                 <label for="floatingInput" style="margin-left: 7px;">Username</label>
                             </div>
