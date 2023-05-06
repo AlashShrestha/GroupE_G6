@@ -2,7 +2,7 @@
 $host = "localhost:3307";
 $user = "root";
 $password = '';
-$db_name = "tms";
+$db_name = "traffix";
 
 $conn = mysqli_connect($host, $user, $password, $db_name);
 

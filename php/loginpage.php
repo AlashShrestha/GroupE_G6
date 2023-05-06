@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
     $password = $_POST['password'];
 }
 
-$check = "SELECT * from user_detail WHERE email='$email' AND password='$password'";
+$check = "SELECT * from user WHERE email='$email' AND pass='$password'";
 
 $result = $conn->query($check);
 
