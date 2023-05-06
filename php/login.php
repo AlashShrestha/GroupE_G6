@@ -101,14 +101,14 @@
                             <div class="form-floating mb-1">
 
 
-                                <input type="email" class="form-control input-field" id="floatingInput" placeholder="name@example.com" name="email" autocomplete="email" required>
+                                <input type="text" class="form-control input-field" id="floatingInput" placeholder="name@example.com" name="email" autocomplete="email" required>
 
                                 <label for="floatingInput" style="margin-left: 7px;">Email address or Username</label>
                             </div>
 
                             <div class="form-floating mb-1">
 
-                                <input type="text" class="form-control input-field" id="floatingInput" name="password" required>
+                                <input type="text" class="form-control input-field" id="floatingInput" name="pass" required>
 
                                 <label for="floatingInput" style="margin-left: 7px;">Password</label>
                             </div>

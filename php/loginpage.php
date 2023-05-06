@@ -4,7 +4,7 @@ include("db_conn.php");
 
 if (isset($_POST['submit'])) {
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $password = $_POST['pass'];
 }
 
 $check = "SELECT * from user WHERE email='$email' AND pass='$password'";
