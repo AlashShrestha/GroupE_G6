@@ -3,8 +3,8 @@
 <style>
   #map {
     position: absolute;
-    height: 90vh;
-    width: 85vw;
+    height: 85vh;
+    width: 80vw;
     margin-left: 20px;
     margin-top: 20px;
   }
