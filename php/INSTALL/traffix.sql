@@ -91,6 +91,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `position` varchar(300) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
+
 --
 -- Dumping data for table `user`
 --
@@ -99,6 +100,15 @@ INSERT INTO `user` (`id`, `user_id`, `name`, `username`, `pass`, `email`, `addre
 (1, 'bcefa114ee', 'Sabin rai', 'sabin123', '12345678', 'sabin@gmail.com', 'naxal', 'admin'),
 (2, '0fd73c73c1', 'Arbin rai', 'arbin123', '12345678', 'arbin@gmail.com', 'bhaktapur', 'officer'),
 (3, '5dea1fd9c3', 'Rohit rai', 'rohit123', '12345678', 'rohit@gmail.com', 'hadigaun', 'officer');
+
+
+
+
+INSERT INTO `user_detail` (`id`,  `name`,  'phone', `email`, `password`) VALUES
+
+
+(1, 'dikesh',   9811, 'dikesh@gmail.com', '12345678');
+
 
 --
 -- Indexes for dumped tables

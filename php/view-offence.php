@@ -41,7 +41,7 @@ function myFunction() {
                                     	<th>Offender</th>
                                     	<th>Reporter</th>
                                     	<th>Address</th>
-										<th>Action</th>
+										
                                     </thead>
                                     <tbody>
 									<?php 
@@ -168,3 +168,4 @@ return false;
 <script src="assets/js/script.js"></script>
 </script>
 </html>
+

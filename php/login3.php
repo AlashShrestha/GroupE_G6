@@ -33,7 +33,7 @@
 	//Sanitize the POST values
 	$login = clean($_POST['username']);
 	$password = clean($_POST['pass']);
-	
+	$email = clean($_POST['email']);
 	//Input Validations
 	if($login == '') {
 		$errmsg_arr[] = 'Username missing';
@@ -41,6 +41,11 @@
 	}
 	if($password == '') {
 		$errmsg_arr[] = 'Password missing';
+		$errflag = true;
+	}
+
+	if($email == '') {
+		$errmsg_arr[] = 'email missing';
 		$errflag = true;
 	}
 	
@@ -52,7 +57,8 @@
 	}
 	
 	//Create query
-	$qry="SELECT * FROM user WHERE username='$login' AND pass='$password'";
+	$qry = "SELECT * FROM user WHERE username='$login' AND pass='$password' AND email='$email'";
+
 	$result=mysqli_query($link,$qry);
 	
 	//Check whether the query was successful or not
@@ -68,7 +74,7 @@
 			exit();
 		}else {
 			//Login failed
-			header("location: login.php");
+			header("location: signup.php");
 			exit();
 		}
 	}else {

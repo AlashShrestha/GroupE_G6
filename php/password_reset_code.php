@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('db_conn.php');
+include('connect.php');
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -23,7 +23,7 @@ function send_password_reset($get_name, $get_email, $token)
     $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom("vcity163@gmail.com", $get_name);
+    $mail->setFrom("dikeshkhatree@gmail.com@gmail.com", $get_name);
     $mail->addAddress($get_email);     //Add a recipient
 
     $mail->isHTML(true);
@@ -31,7 +31,7 @@ function send_password_reset($get_name, $get_email, $token)
 
     $email_templet = "
         <h2> Hello </h2>
-        <p> You are receiving this email because we revieved a password reset request for your account </p>
+        <h3> You are receiving this email because we revieved a password reset request for your account </h3>
         <br></br>
         <a href = 'http://localhost/GroupE_G6/php/password-change.php?token=$token&email=$get_email'>Click Me</a>
     ";
@@ -44,7 +44,7 @@ if (isset($_POST['password_reset_link'])) {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $token = md5(rand());
 
-    $check_email = "SELECT email, name FROM user_detail WHERE email = '$email' LIMIT 1";
+    $check_email = "SELECT email, name FROM user WHERE email = '$email' LIMIT 1";
     $check_email_run = mysqli_query($conn, $check_email);
 
     if (mysqli_num_rows($check_email_run) > 0) {
@@ -52,7 +52,7 @@ if (isset($_POST['password_reset_link'])) {
         $get_name = $row['name'];
         $get_email = $row['email'];
 
-        $update_token = "UPDATE user_detail SET verify_token = '$token' WHERE email = '$get_email' LIMIT 1";
+        $update_token = "UPDATE user SET verify_token = '$token' WHERE email = '$get_email' LIMIT 1";
         $update_token_run = mysqli_query($conn, $update_token);
 
         if ($update_token_run) {
