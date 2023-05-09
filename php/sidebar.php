@@ -37,6 +37,14 @@ if(!isset($_SESSION['SESS_FIRST_NAME'])){
 
     <!--  CSS for Demo Purpose, don't include it in your project     -->
     <link href="assets/css/demo.css" rel="stylesheet" />
+     <!-- Leaflet CSS -->
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+        <!-- Locate CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.79.0/dist/L.Control.Locate.min.css" />
+        <!-- Routing CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+        <!-- Geocoder CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
 	
     <script src="assets/js/jeffartagame.js" type="text/javascript" charset="utf-8"></script>
     <script src="assets/js/lib/jquery.js" type="text/javascript"></script>
@@ -44,6 +52,15 @@ if(!isset($_SESSION['SESS_FIRST_NAME'])){
 
 
 <script src="js/application.js" type="text/javascript" charset="utf-8"></script>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+        <!-- Locate JS -->
+        <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.79.0/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+        <!-- Routing JS -->
+        <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+        <!-- Geocoder JS -->
+        <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
 
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -69,7 +86,7 @@ if(!isset($_SESSION['SESS_FIRST_NAME'])){
 <?php }?>
 <?php
 $position=$_SESSION['SESS_LAST_NAME'];
-if($position=='officer') {
+if($position=='public') {
 ?>
  <ul class="nav">
                 <li class="">
@@ -81,9 +98,33 @@ if($position=='officer') {
 				 <li>
                     <a href="report-offence.php">
                         <i class="pe-7s-look"></i>
-                        <p>Report Offence</p>
+                        <p>Report</p>
                     </a>
                 </li>
+
+                <li>
+                    <a href="view-offence.php">
+                        <i class="pe-7s-note2"></i>
+                        <p>Offense List</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="rules.php">
+                        <i class="fa fa-legal"></i>
+                        <p>Rules</p>
+                    </a>
+                </li>
+
+                
+                <li>
+                    <a href="map.php">
+                        <i class="pe-7s-map-marker"></i>
+                        <p>view Maps</p>
+                    </a>
+                </li>
+
+
 				 <li>
                     <a href="user.php">
                         <i class="pe-7s-user"></i>
@@ -91,6 +132,15 @@ if($position=='officer') {
                     </a>
                 </li>
            
+
+                <li>
+                    <a href="site-settings.php">
+                        <i class="pe-7s-tools"></i>
+                        <p>Settings</p>
+                    </a>
+                </li>
+
+
 			 </ul>
 <?php
 }
@@ -106,7 +156,7 @@ if($position=='admin') {
 				 <li>
                     <a href="report-offence.php">
                         <i class="pe-7s-look"></i>
-                        <p>View Report</p>
+                        <p> Report</p>
                     </a>
                 </li>
                <li>
@@ -117,13 +167,14 @@ if($position=='admin') {
                 </li>
                
                
+                
                 <li>
-                <a href="">
-                        <i class="	fa fa-credit-card"></i>
-                        <p>payment</p>
+                    <a href="sidebar.php">
+                        <i class="fa fa-legal"></i>
+                        <p>Rules</p>
                     </a>
                 </li>
-
+                
 
 				<li>
                     <a href="add-user.php">
@@ -144,7 +195,8 @@ if($position=='admin') {
                     </a>
                 </li>
 
-              
+                
+
 
                <li>
                     <a href="site-settings.php">
