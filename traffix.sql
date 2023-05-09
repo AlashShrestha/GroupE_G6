@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: May 09, 2023 at 10:06 AM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 8.1.10
+-- Generation Time: May 09, 2023 at 05:55 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -119,6 +119,7 @@ CREATE TABLE `user` (
   `email` varchar(300) NOT NULL,
   `address` varchar(500) NOT NULL,
   `position` varchar(300) NOT NULL,
+  `token` varchar(200) NOT NULL,
   `verify_token` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -126,10 +127,9 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `user_id`, `name`, `username`, `pass`, `email`, `address`, `position`, `verify_token`) VALUES
-(1, 'bcefa114ee', 'Rohit karki', 'sabin123', '12345678', 'rohitkarki@gmail.com', 'hadigaun', 'admin', ''),
-(2, '0fd73c73c1', 'Arbin rai', 'arbin123', '12345678', 'arbin@gmail.com', 'bhaktapur', 'officer', 'ccda822e70b98eeae75159ada9e121c3'),
-(3, '5dea1fd9c3', 'Rohit rai', 'rohit123', '12345678', 'rohitkarki@gmail.com', 'hadigaun', 'officer', '');
+INSERT INTO `user` (`id`, `user_id`, `name`, `username`, `pass`, `email`, `address`, `position`, `token`, `verify_token`) VALUES
+(1, 'bcefa114ee', 'Rohit karki', 'sabin123', '12345678', 'rohitkarki@gmail.com', 'hadigaun', 'admin', '0', ''),
+(0, '0f08f7d437', 'Arbin Rai', 'arbin123', '12345678', 'arbin@gmail.com', 'Hadigaun', 'public', '', '');
 
 --
 -- Indexes for dumped tables
