@@ -144,6 +144,7 @@ if (!isset($_SESSION['SESS_FIRST_NAME'])) {
                     </li>
 
 
+
                 </ul>
             <?php
             }
@@ -194,7 +195,7 @@ if (!isset($_SESSION['SESS_FIRST_NAME'])) {
                     <li>
                         <a href="map.php">
                             <i class="pe-7s-map-marker"></i>
-                            <p>view Maps</p>
+                            <p>View Maps</p>
                         </a>
                     </li>
 
