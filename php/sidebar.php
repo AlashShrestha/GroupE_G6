@@ -50,11 +50,11 @@ if (!isset($_SESSION['SESS_FIRST_NAME'])) {
         <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
 
         <script src="assets/js/jeffartagame.js" type="text/javascript" charset="utf-8"></script>
-        <script src="assets/js/lib/jquery.js" type="text/javascript"></script>
+        <script src="assets/js/jquery.js" type="text/javascript"></script>
         <script src="assets/js/facebox.js" type="text/javascript"></script>
 
 
-        <script src="js/application.js" type="text/javascript" charset="utf-8"></script>
+        
         <!-- Leaflet JS -->
         <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
         <!-- Locate JS -->
@@ -74,7 +74,7 @@ if (!isset($_SESSION['SESS_FIRST_NAME'])) {
 <body>
 
     <div class="wrapper">
-        <div class="sidebar" data-color="blue" data-image="assets/img/sidebar-5.jpg">
+        <div class="sidebar" data-color="blue">
 
 
 

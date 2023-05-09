@@ -95,7 +95,7 @@ if (isset($_POST['password_update'])) {
                         $$update_to_new_token = mysqli_query($conn, $update_to_new_token);
 
                         $_SESSION['status'] = "New password successfully updated.";
-                        header("Location: login.php");
+                        header("Location: index.php");
                         exit(0);
                     } else {
                         $_SESSION['status'] = "Did not update passowrd. Something went wrong";

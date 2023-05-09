@@ -82,6 +82,6 @@ return false;
 });
 
 </script>
-<script src="assets/js/script.js"></script>
+
 </script>
 </html>
