@@ -70,7 +70,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
                 </td>
                 <td width="20%" class="border-3 border-dark">
                     <div class="w-100 d-flex align-items-center justify-content-center">
-                        <img src="<?php echo validate_image($_settings->info('logo')) ?>" alt="<?php $_settings->info('short_name') ?>" class="img-thumnail" id="cimg">
+                       
                     </div>
                 </td>
             </tr>

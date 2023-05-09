@@ -6,6 +6,7 @@ if(!isset($_SESSION['SESS_FIRST_NAME'])){
     header("location: login.php");
 }
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -37,24 +38,24 @@ if(!isset($_SESSION['SESS_FIRST_NAME'])){
 
     <!--  CSS for Demo Purpose, don't include it in your project     -->
     <link href="assets/css/demo.css" rel="stylesheet" />
-     <!-- Leaflet CSS -->
-     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+	
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
         <!-- Locate CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.79.0/dist/L.Control.Locate.min.css" />
         <!-- Routing CSS -->
         <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
         <!-- Geocoder CSS -->
         <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
-	
+
     <script src="assets/js/jeffartagame.js" type="text/javascript" charset="utf-8"></script>
     <script src="assets/js/lib/jquery.js" type="text/javascript"></script>
 <script src="assets/js/facebox.js" type="text/javascript"></script>
 
 
 <script src="js/application.js" type="text/javascript" charset="utf-8"></script>
-
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
         <!-- Locate JS -->
         <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.79.0/dist/L.Control.Locate.min.js" charset="utf-8"></script>
         <!-- Routing JS -->
