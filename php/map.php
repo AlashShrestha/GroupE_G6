@@ -20,7 +20,7 @@
     zoomControl: false,
   });
   L.Routing.control({
-    waypoints: [L.latLng(27.71228, 85.33076), L.latLng(27.672968, 85.429291)],
+    waypoints: [L.latLng(27.666667, 85.316667), L.latLng(27.672968, 85.429291)],
   }).addTo(map);
   // Changing the position of zoomControl to bottom right
   L.control
