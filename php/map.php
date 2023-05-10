@@ -42,7 +42,7 @@
     .addTo(map);
 
   L.Control.geocoder({
-    collapsed: true,
+    collapsed: false,
     position: "topleft",
   }).addTo(map);
 </script>
