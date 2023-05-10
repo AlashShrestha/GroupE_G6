@@ -19,9 +19,6 @@
     zoom: 15,
     zoomControl: false,
   });
-  L.Routing.control({
-    waypoints: [L.latLng(27.666667, 85.316667), L.latLng(27.672968, 85.429291)],
-  }).addTo(map);
   // Changing the position of zoomControl to bottom right
   L.control
     .zoom({
@@ -43,7 +40,7 @@
 
   L.Control.geocoder({
     collapsed: false,
-    position: "topleft",
+    position: "topright",
   }).addTo(map);
 </script>
 <?php include "footer.php"; ?>
