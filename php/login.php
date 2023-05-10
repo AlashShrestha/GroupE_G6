@@ -73,7 +73,7 @@ include"connect.php";
             <div class="col-5" style="box-sizing: border-box;">
                 <h1 class="text-light"><b>Sign in to</b><br>Traffix!</h1>
                 <p class="text-light">
-                <img src="c.png" alt="" width="400px"
+                <img src="tms.png" alt="" width="400px"
                     style="position: absolute;bottom:0;overflow: hidden;margin-left:15rem">
             </div>
             <div class="row d-flex justify-content-center" style="position: relative;top: 175px;">

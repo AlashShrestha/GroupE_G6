@@ -73,6 +73,9 @@ if (!isset($_SESSION['SESS_FIRST_NAME'])) {
 
 <body>
 
+                          
+
+                                         
     <div class="wrapper">
         <div class="sidebar" data-color="blue">
 
@@ -80,11 +83,9 @@ if (!isset($_SESSION['SESS_FIRST_NAME'])) {
 
             <div class="sidebar-wrapper">
                 <div class="logo">
-                    <h3> Welcome to TMS </h3>-
+                    <!-- <h3>Welcome to TMS </h3>- -->
+                            <img src="logo.png" alt="Logo" class="img-fluid" style="height: 70px; width: 70px; margin-left: 25%;">
 
-                    <?php echo $row['site_name']; ?>
-
-                    </a>
                 </div>
             <?php } ?>
             <?php
@@ -106,7 +107,7 @@ if (!isset($_SESSION['SESS_FIRST_NAME'])) {
                     </li>
 
                     <li>
-                        <a href="view-offence.php">
+                        <a href="view-offence1.php">
                             <i class="pe-7s-note2"></i>
                             <p>Offense List</p>
                         </a>
@@ -127,7 +128,7 @@ if (!isset($_SESSION['SESS_FIRST_NAME'])) {
                         </a>
                     </li>
 
-
+                                
                     <li>
                         <a href="user.php">
                             <i class="pe-7s-user"></i>
@@ -136,13 +137,7 @@ if (!isset($_SESSION['SESS_FIRST_NAME'])) {
                     </li>
 
 
-                    <li>
-                        <a href="site-settings.php">
-                            <i class="pe-7s-tools"></i>
-                            <p>Settings</p>
-                        </a>
-                    </li>
-
+                    
 
 
                 </ul>
@@ -170,10 +165,10 @@ if (!isset($_SESSION['SESS_FIRST_NAME'])) {
                         </a>
                     </li>
 
-
+                                                                
 
                     <li>
-                        <a href="sidebar.php">
+                        <a href="rules.php">
                             <i class="fa fa-legal"></i>
                             <p>Rules</p>
                         </a>
@@ -199,7 +194,7 @@ if (!isset($_SESSION['SESS_FIRST_NAME'])) {
                         </a>
                     </li>
 
-
+                  
 
 
                     <li>

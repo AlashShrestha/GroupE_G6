@@ -65,7 +65,7 @@
                              </div>
 
                          </div> <?php } ?>
-                     <button disabled="disabled" class="btn btn-primary" style="margin-left: 50%;">Paid</button>
+                     
                      </div>
              </div>
          </div>
